@@ -9,7 +9,7 @@ Note app in Django
 - SQLite3
 
 ## TODO
-- [] Add tables: notes, user, tag, note\_tag
-- [] Use UserManager for user table
-- [] User collaboration (give permission to other user to use one's notes)
-- [] Add authorization (users and group) and authentication (jwt)
+- [ ] Add models: Notes, User, Tag, Note\_Tag
+- [ ] Use UserManager for user table
+- [ ] User collaboration (give permission to other user to use one's notes)
+- [ ] Add authorization (users and group) and authentication (jwt)
