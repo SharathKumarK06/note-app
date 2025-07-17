@@ -5,52 +5,43 @@ Note app in Django
 ## Dependencies
 - Python
 - Django
-- DRF
 - SQLite3
 
 ## TODO
 - [ ] Add models for
     - [x] Notes
     - [x] Tag
+    - [x] Note\_Tag for many-to-many relation
     - [ ] User
-- [ ] Add serializer for models
-- [ ] Use viewset from drf
-- [ ] Use router in urlconf
-- [ ] Use UserManager for user table
-- [ ] User collaboration (give permission to other user to use one's notes)
-- [ ] Add authorization (users and group) and authentication (jwt)
-
-## Planning
-Tables
----
-```
-| note                                |
-| ---                                 |
-| id (INT NOT NULL PRIMARY KEY)       |
-| name (VARCHAR(128) NOT NULL UNIQUE) |
-| owner FOREIGN KEY to user           |
-| text (TEXT)                         |
-| created_at (DATE)                   |
-| modified_at (DATE)                  |
-
-| tag                                 |
-| ---                                 |
-| id (INT NOT NULL PRIMARY KEY)       |
-| name (VARCHAR(32) NOT NULL UNIQUE)  |
-| description (VARCHAR(128))          |
-
-| note_tag                            |
-| ---                                 |
-| id (INT NOT NULL PRIMARY KEY)       |
-| note_id FOREIGN KEY to note         |
-| tag_id FOREIGN KEY to tag           |
-
-| user                                |
-| ---                                 |
-| id (INT NOT NULL PRIMARY KEY)       |
-| name (VARCHAR(128) NOT NULL)        |
-| email (VARCHAR(128) NOT NULL)       |
-| password (VARCHAR(128) NOT NULL)    |
-| created_at (DATE)                   |
-```
+- [ ] Create endpoints for
+    - [x] List notes
+    - [ ] Create note
+    - [ ] Edit note
+    - [ ] Delete note
+- [ ] Create views for
+    - [x] List notes
+    - [ ] Create note
+    - [ ] Edit note
+    - [ ] Delete note/notes
+- Create template for
+    - [ ] List notes
+    - [ ] Create note/notes
+    - [ ] Edit note
+    - [ ] Show list of notes and deleting conformation
+- [ ] Add settings to customize
+    - [ ] Change fonts
+    - [ ] Change theme
+    - [ ] Change visible name
+    - [ ] Change email
+- [ ] Add account creation feature
+    - [ ] Make account public or private
+    - [ ] Verify using otp
+    - [ ] Sign in using google account (OAuth)
+    - [ ] 2 Factor authentication
+- [ ] Add authentication for user to access their notes
+- [ ] Add authorization for owned user to access the notes
+- [ ] User collaboration (give permission to other user by owner to use one's notes)
+- [ ] Search
+    - [ ] Notes
+    - [ ] Users
 
