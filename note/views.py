@@ -8,7 +8,7 @@ from .forms import NoteForm
 def note_list(request):
     notes_list = Note.objects.all()
     context = { "notes_list": notes_list }
-    return render(request, "note/index.html", context)
+    return render(request, "note/list.html", context)
 
 # Read note with 'note_id'
 def note_item(request, note_id):

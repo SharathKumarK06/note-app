@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Note
+        </title>
+    </head>
+    <body>
+        <a href="{% url 'note_list' %}">
+            Go Back
+        </a>
+        {% if note %}
+        <h1>{{ note.title }}</h1>
+
+        <div id="content">
+            {{ note.content  }}
+
+            <hr>
+            Tags: 
+            <ul>
+                {% for tag in tags %}
+                <li>{{ tag.name }} - {{ tag.description }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        {% else %}
+        <p>
+            No notes available.
+        </p>
+        {% endif %}
+    </body>
+</html>
